@@ -1,65 +1,56 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import React from "react";
+import Link from "next/link";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer"
+import Head from "next/head";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Cool Projects</title>
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <Navbar />
+      <p>
+        Hello! I'm Nils, a full stack developer from germany who loves to
+        work on random projects. So one day I thought to myself: "Hey, wouldn't
+        it be nice if I had a place where I could document all of the cool
+        projects that I worked on?"
+        <br />
+        The answer might be quite obvious, because you are reading this, but
+        yes, it would be quite cool!
+      </p>
+      <h3>So what projects will be put on this website?</h3>
+      <p>
+        I really don't want to turn this website into a dump. That's why I
+        decided to only put projects on here that I think I would want to use. I
+        will also only write about projects that I finished, starting from{" "}
+        <b>January 1st, 2021</b>. Also, every project that is finished and
+        published here, including this website, will have a Github repository.
+      </p>
+      <h3>
+        Criteria for a <i>cool</i> project
+      </h3>
+      <p>
+        Now I don't want to put just anything on here. The projects that I
+        envision to be on this website should fit these criteria:
+        <ul>
+          <li>
+            fun
+          </li>
+          <li>
+            interesting
+          </li>
+          <li>
+            short<i>(ish)</i>
+          </li>
+        </ul>
+        A fun and interesting project sounds great and is something that probably everyone would want to work on in their free time, but I do have a full time job and family stuff I need to attend to, so I want to keep projects short.
+      </p>
+      <p>
+        Check out my progress on my <Link href="/projects">projects</Link> page.
+      </p>
+      <Footer/>
     </div>
-  )
+  );
 }
